@@ -2,14 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:spirit_app/Pages/Home/widgets/Builder.dart';
 import 'package:spirit_app/Pages/Home/widgets/ClipPath_parallelogram.dart';
-import 'package:spirit_app/Pages/Home/widgets/Pronite_card.dart';
 import 'package:spirit_app/Pages/Home/widgets/pronite_builder.dart';
-import 'package:spirit_app/Pages/Merch/Merch.dart';
-import 'package:spirit_app/Pages/Profile/Profile.dart';
-import 'package:spirit_app/Pages/Pronites/Pronites.dart';
-import 'package:spirit_app/Pages/Sports/Sports.dart';
 import 'package:spirit_app/utils/styles/outline.dart';
-import 'package:spirit_app/utils/widgets/schedule_card.dart';
 import 'package:spirit_app/utils/styles/colors.dart';
 import 'package:spirit_app/utils/styles/styles.dart';
 
