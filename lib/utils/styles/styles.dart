@@ -16,6 +16,8 @@ class AppStyles{
 /// SemiBold
   /// size 9
   static const s1 = TextStyle(fontWeight: FontWeight.w400,fontSize: 9,color: AppColors.white);
+  /// size 12
+  static const s2 = TextStyle(fontWeight: FontWeight.w400,fontSize: 12,color: AppColors.white);
 /// Light
   /// size 12
   static const l1 = TextStyle(color: Colors.white, fontSize: 12, fontFamily: 'Sequel Sans', height: 0,fontWeight: FontWeight.w300);

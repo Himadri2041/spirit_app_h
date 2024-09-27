@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spirit_app/Pages/Home/Home.dart';
+import 'package:spirit_app/Pages/Home/widgets/Navigation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage()
+      debugShowCheckedModeBanner: false,
+      home: Navigation()
     );
   }
 }

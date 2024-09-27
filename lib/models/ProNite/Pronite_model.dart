@@ -1,10 +1,10 @@
-class PronitModel{
+class ProniteModel{
   final int id;
   final String artist;
   final String date;
   final String time;
   final String venue;
-  PronitModel({
+  ProniteModel({
     required this.id,
     required this.artist,
     required this.date,

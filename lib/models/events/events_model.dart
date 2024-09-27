@@ -1,6 +1,7 @@
 class EventModel{
   final int id;
   final String eventName;
+  final String caterogy;
   final String date;
   final String team1;
   final String team2;
@@ -9,6 +10,7 @@ class EventModel{
   EventModel({
     required this.id,
     required this.eventName,
+    required this.caterogy,
     required this.date,
     required this.team1,
     required this.team2,
