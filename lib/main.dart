@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:spirit_app/Pages/Home/widgets/Navigation.dart';
+import 'package:spirit_app/pages/home/home.dart';
+import 'package:spirit_app/utils/globals.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: navigatorKey,
+      scaffoldMessengerKey: scaffoldMessengerKey,
       debugShowCheckedModeBanner: false,
-      home: Navigation()
+      home: const Home(),
     );
   }
 }
-

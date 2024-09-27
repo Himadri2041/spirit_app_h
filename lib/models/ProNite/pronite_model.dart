@@ -1,4 +1,4 @@
-class ProniteModel{
+class ProniteModel {
   final int id;
   final String artist;
   final String date;
@@ -10,5 +10,5 @@ class ProniteModel{
     required this.date,
     required this.time,
     required this.venue,
-});
+  });
 }
