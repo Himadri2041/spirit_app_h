@@ -39,7 +39,35 @@ class AppStyles {
       fontFamily: 'Sequel Sans',
       height: 0,
       fontWeight: FontWeight.w300);
+
+  static const m1=TextStyle(
+    color: Colors.white,
+    fontSize: 20.85,
+    fontFamily: 'Base Neue Trial',
+    height: 0,
+    letterSpacing: 0.63,
+  );
+  static const m2 = TextStyle(
+      color: Colors.white,
+      fontSize: 14,
+      fontFamily: 'Sequel Sans',
+      height: 0,
+      fontWeight: FontWeight.w500);
+  static const m3 = TextStyle(
+    color: Color(0xFFFE2A53),
+    fontSize: 18.19,
+    fontStyle: FontStyle.italic,
+    fontFamily: 'Tw Cen MT',
+    height: 0,
+  );
+  static const m4 = TextStyle(
+      color: Colors.black,
+      fontSize: 16,
+      fontFamily: 'Sequel Sans',
+      height: 0,
+      fontWeight: FontWeight.w500);
 }
+
 
 extension AppStylesExtension on TextStyle {
   TextStyle setColor(Color color) => copyWith(color: color);
