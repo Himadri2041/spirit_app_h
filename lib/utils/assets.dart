@@ -7,6 +7,8 @@ class Assets {
   static const helpDesk = '$iconPath/helpdesk.svg';
   static const schedule = '$iconPath/schedule.svg';
   static const cart = '$iconPath/cart.png';
+  static const scheduletitle = '$iconPath/Schedule_title.png';
+  static const nov1 = '$iconPath/Nov 1.png';
 
   // tab icons
   static const home = '$iconPath/home.svg';

@@ -21,7 +21,9 @@ class _ScheduleCardState extends State<ScheduleCard> {
         height: 120,
         clipBehavior: Clip.antiAlias,
         decoration: Outline.red_outline,
-        child: Column(
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
@@ -65,6 +67,6 @@ class _ScheduleCardState extends State<ScheduleCard> {
                 margin: const EdgeInsets.only(left: 14.5),
                 child: Text(widget.eventModel.venue, style: AppStyles.s1)),
           ],
-        ));
+        )));
   }
 }
