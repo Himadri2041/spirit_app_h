@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spirit_app/models/Helpdesk/Contacts_model.dart';
-import 'package:spirit_app/models/Helpdesk/contacts_data.dart';
+import 'package:spirit_app/models/Helpdesk/contacts_model.dart';
 import 'package:spirit_app/utils/styles/styles.dart';
 
 class Contactrow extends StatelessWidget {
@@ -9,13 +8,17 @@ class Contactrow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        contactModel.icon,
-        SizedBox(width: 8,),
-        Text(contactModel.contact,
-        style:AppStyles.h1),
-      ],
+    return Container(
+      height:60,
+      width:double.infinity,
+      child: Row(
+        children: [
+          contactModel.icon,
+          SizedBox(width: 8,),
+          Text(contactModel.contact,
+          style:AppStyles.h1),
+        ],
+      ),
     );
 
   }

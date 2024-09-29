@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spirit_app/utils/assets.dart';
 
-class phnh extends StatelessWidget {
+class PhoneIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +10,7 @@ class phnh extends StatelessWidget {
       icon: ImageIcon(
         AssetImage(Assets.phone),
         color: Color(0xFFCFFF69),
-        size: 40,
+        size: 50,
       ),
     );
   }

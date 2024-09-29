@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spirit_app/utils/assets.dart';
 
-class mailh extends StatelessWidget {
+class MailIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +10,6 @@ class mailh extends StatelessWidget {
       icon: ImageIcon(
         AssetImage(Assets.mail),
         color: Color(0xFFCFFF69),
-        size: 40,
       ),
     );
   }
