@@ -10,7 +10,7 @@ class Sports extends StatefulWidget {
 class _SportsState extends State<Sports> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(child: Text("This is Sports Page"),),
     );
   }

@@ -63,7 +63,7 @@ class _MerchState extends State<Merch> {
       child: ClipPath(
         clipper: ClipLeftAlign(),
         child: Container(
-          padding: const EdgeInsets.all(4).copyWith(right: 12, left: 8),
+          padding: const EdgeInsets.all(2).copyWith(right: 12, left: 16),
           decoration: const BoxDecoration(
             color: AppColors.primaryColor,
           ),

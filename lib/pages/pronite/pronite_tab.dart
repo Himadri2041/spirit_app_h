@@ -10,7 +10,7 @@ class Pronites extends StatefulWidget {
 class _PronitesState extends State<Pronites> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(child: Text("This is Pronites Page"),),
     );
   }
