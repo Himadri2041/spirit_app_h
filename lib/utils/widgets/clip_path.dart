@@ -51,3 +51,53 @@ class ClipParallelogram extends CustomClipper<Path> {
     return true;
   }
 }
+
+class ClipLeftAlign extends CustomClipper<Path> {
+  final double percent;
+  ClipLeftAlign({this.percent = 0.1});
+
+  @override
+  Path getClip(Size size) {
+    double width = size.width;
+    double height = size.height;
+
+    Path path = Path();
+    path.moveTo(width * percent, 0);
+    path.lineTo(width, 0);
+    path.lineTo(width, height);
+    path.lineTo(0, height);
+    path.close();
+
+    return path;
+  }
+
+  @override
+  bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
+    return true;
+  }
+}
+
+class ClipRightAlign extends CustomClipper<Path> {
+  final double percent;
+  ClipRightAlign({this.percent = 0.1});
+
+  @override
+  Path getClip(Size size) {
+    double width = size.width;
+    double height = size.height;
+
+    Path path = Path();
+    path.moveTo(0, 0);
+    path.lineTo(width, 0);
+    path.lineTo(width * (1 - percent), height);
+    path.lineTo(0, height);
+    path.close();
+
+    return path;
+  }
+
+  @override
+  bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
+    return true;
+  }
+}
