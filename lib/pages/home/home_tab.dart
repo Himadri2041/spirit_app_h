@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:spirit_app/pages/home/widgets/help_desk.dart';
 import 'package:spirit_app/pages/home/widgets/ongoing_matches.dart';
 import 'package:spirit_app/pages/home/widgets/home_carousel.dart';
 import 'package:spirit_app/pages/home/widgets/home_pronite_list.dart';
@@ -14,7 +15,7 @@ class HomeTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
-      appBar: _appBar(),
+      appBar: _appBar(context),
       body: Stack(
         children: [
           Positioned.fill(
@@ -97,14 +98,26 @@ class HomeTab extends StatelessWidget {
     );
   }
 
-  AppBar _appBar() {
+  AppBar _appBar(BuildContext context) {
     return AppBar(
       automaticallyImplyLeading: false,
       backgroundColor: AppColors.backgroundColor,
       title: SvgPicture.asset(Assets.appTitle, height: 24),
       centerTitle: false,
       actions: [
-        SvgPicture.asset(Assets.helpDesk, height: 24, width: 24),
+        GestureDetector(
+          onTap: () {
+            showDialog(
+              context: context,
+              barrierDismissible: true,
+              useSafeArea: true,
+              builder: (context) {
+                return const HelpDialog();
+              },
+            );
+          },
+          child: SvgPicture.asset(Assets.helpDesk, height: 24, width: 24),
+        ),
         const SizedBox(width: 8),
       ],
     );
