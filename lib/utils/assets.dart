@@ -19,6 +19,7 @@ class Assets {
   static const mail='$iconPath/mail-01.png';
   static const phone='$iconPath/phone.png';
   static const helpdesktitle = '$iconPath/Helpdesk.png';
+  static const yourCartTitle = '$iconPath/your_cart_title.svg';
 
   // tab icons
   static const home = '$iconPath/home.svg';
@@ -37,4 +38,5 @@ class Assets {
   static const artistHighlightBg = '$imagePath/artist_highlight_bg.png';
   static const defaultArtist = '$imagePath/artist.png';
   static const defaultHomeBanner = '$imagePath/default_home_banner.jpg';
+  static const merchBg = '$imagePath/merch_bg.png';
 }

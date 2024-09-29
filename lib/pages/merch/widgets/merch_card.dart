@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:spirit_app/utils/assets.dart';
+import 'package:spirit_app/pages/merch/widgets/march_options_carousel.dart';
 import 'package:spirit_app/utils/styles/colors.dart';
 import 'package:spirit_app/utils/styles/styles.dart';
 import 'package:spirit_app/utils/widgets/clip_path.dart';
 
-class MerchCard extends StatelessWidget {
+class MerchCard extends StatefulWidget {
   const MerchCard({super.key});
+
+  @override
+  State<MerchCard> createState() => _MerchCardState();
+}
+
+class _MerchCardState extends State<MerchCard> {
+  var ordering = false;
 
   @override
   Widget build(BuildContext context) {
@@ -20,16 +27,7 @@ class MerchCard extends StatelessWidget {
                   color: AppColors.blank,
                   border: Border.all(color: AppColors.primaryColor),
                 ),
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Image.asset(
-                      Assets.merchwhite,
-                      width: double.infinity,
-                    ),
-                    Image.asset(Assets.merchlogo),
-                  ],
-                ),
+                child: const MerchOptionsCarousel(),
               ),
               Transform.translate(
                 offset: const Offset(-6, 0),
@@ -43,9 +41,11 @@ class MerchCard extends StatelessWidget {
                         decoration: const BoxDecoration(
                           color: AppColors.primaryColor,
                         ),
-                        child: const Text(
+                        child: Text(
                           'Logo Pink Blue Tee (White)',
-                          style: AppStyles.m2,
+                          style: AppStyles.m2.copyWith(
+                            fontStyle: FontStyle.italic,
+                          ),
                         ),
                       ),
                     ),
@@ -66,15 +66,22 @@ class MerchCard extends StatelessWidget {
               )
             ],
           ),
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.all(12),
-            decoration: const BoxDecoration(color: AppColors.secondaryColor),
-            child: Center(
-              child: Text(
-                "PRE-ORDER",
-                style: AppStyles.b3.copyWith(
-                  color: AppColors.backgroundColor,
+          GestureDetector(
+            onTap: () {
+              setState(() {
+                ordering = true;
+              });
+            },
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(12),
+              decoration: const BoxDecoration(color: AppColors.secondaryColor),
+              child: Center(
+                child: Text(
+                  "PRE-ORDER",
+                  style: AppStyles.b3.copyWith(
+                    color: AppColors.backgroundColor,
+                  ),
                 ),
               ),
             ),
