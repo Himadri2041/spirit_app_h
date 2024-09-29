@@ -11,9 +11,8 @@ class Assets {
   static const nov1 = '$iconPath/Nov 1.png';
   static const humorNight = '$iconPath/humor_night.svg';
   static const about = '$iconPath/about.svg';
-  static const black_cart = '$iconPath/cart_black.svg';
+  static const blackCart = '$iconPath/cart_black.svg';
   static const team = '$iconPath/team.svg';
-  static const nametitle = '$iconPath/name_title.svg';
   static const profiletitle = '$iconPath/profile_title.svg';
   static const emailtitle = '$iconPath/email_title.svg';
   static const eventtitle = '$iconPath/registeredEvents_title.svg';
@@ -28,7 +27,6 @@ class Assets {
   static const merch = '$iconPath/tee.svg';
   static const profile = '$iconPath/profile.svg';
   static const spiritLogo = '$iconPath/spirit_logo.svg';
-
 
   // images
   static const backgroundFrame = '$imagePath/background_frame.png';
