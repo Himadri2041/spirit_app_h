@@ -14,6 +14,11 @@ class Assets {
   static const blackCart = '$iconPath/cart_black.svg';
   static const team = '$iconPath/team.svg';
   static const profiletitle = '$iconPath/profile_title.svg';
+  static const emailtitle = '$iconPath/email_title.svg';
+  static const eventtitle = '$iconPath/registeredEvents_title.svg';
+  static const mail='$iconPath/mail-01.png';
+  static const phone='$iconPath/phone.png';
+  static const helpdesktitle = '$iconPath/Helpdesk.png';
 
   // tab icons
   static const home = '$iconPath/home.svg';

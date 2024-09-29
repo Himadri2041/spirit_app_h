@@ -66,6 +66,12 @@ class AppStyles {
       fontFamily: 'Sequel Sans',
       height: 0,
       fontWeight: FontWeight.w500);
+  static const h1=TextStyle(
+    color: Color(0xFFCFFF69),
+    fontSize: 16,
+    fontFamily: 'Sequel Sans',
+    height: 0,
+  );
 }
 
 extension AppStylesExtension on TextStyle {

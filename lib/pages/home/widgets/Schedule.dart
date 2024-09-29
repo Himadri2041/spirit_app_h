@@ -10,10 +10,10 @@ class ScheduleDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
   return Container(
-
         color: Colors.black,
         child:Expanded(child:
-        Container(
+         Container(
+           width: double.infinity,
           margin: const EdgeInsets.only(top:40,left:20,right:20,bottom:40),
           height: 762,
           clipBehavior: Clip.antiAlias,
@@ -21,8 +21,17 @@ class ScheduleDialog extends StatelessWidget {
                     color: AppColors.blank,
                     border: Border.all(color: AppColors.primaryColor),
                   ),
-          child: Column(
+
+          child:
+          SingleChildScrollView(child:Column(
+            mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          verticalDirection:VerticalDirection.down,
+
+
           children: [
+
              Container(
              height: 47,
              decoration: const BoxDecoration(color: Color(0xFFFE2A53)),
@@ -61,7 +70,7 @@ class ScheduleDialog extends StatelessWidget {
             ),
 
                      ]
-          ),
+          ),)
         ))
   );
            }}
