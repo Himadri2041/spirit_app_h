@@ -86,7 +86,7 @@ class HomeTab extends StatelessWidget {
                   margin: const EdgeInsets.only(left: 18),
                   child: const Text("Pronites", style: AppStyles.b2),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 20),
                 const HomeProniteList(),
                 const SizedBox(height: 40),
               ],
