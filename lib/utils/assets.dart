@@ -9,6 +9,7 @@ class Assets {
   static const cart = '$iconPath/cart.svg';
   static const scheduletitle = '$iconPath/Schedule_title.png';
   static const nov1 = '$iconPath/Nov 1.png';
+  static const humorNight = '$iconPath/humor_night.svg';
 
   // tab icons
   static const home = '$iconPath/home.svg';
@@ -23,4 +24,7 @@ class Assets {
   static const merchwhite = '$imagePath/merch.png';
   static const merchlogo = '$imagePath/merchlogo.png';
   static const rectangley = '$imagePath/Rectangley.png';
+  static const artistHighlightBg = '$imagePath/artist_highlight_bg.png';
+  static const defaultArtist = '$imagePath/artist.png';
+  static const defaultHomeBanner = '$imagePath/default_home_banner.jpg';
 }

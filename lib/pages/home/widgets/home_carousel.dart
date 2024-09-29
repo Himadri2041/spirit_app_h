@@ -1,4 +1,6 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:spirit_app/utils/assets.dart';
 import 'package:spirit_app/utils/widgets/clip_path.dart';
 
 class HomeCarousel extends StatelessWidget {
@@ -6,17 +8,28 @@ class HomeCarousel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16),
-      child: CustomPaint(
-        painter: BorderPainter(),
-        child: ClipPath(
-          clipper: ClipParallelogram(),
-          child: Image.asset(
-            "assets/images/WhatsApp Image 2023-11-19 at 00.50.47_bbc6a890.jpg",
-            fit: BoxFit.cover,
+    return CarouselSlider.builder(
+      itemCount: 5,
+      itemBuilder: (context, _, index) {
+        return CustomPaint(
+          painter: BorderPainter(),
+          child: ClipPath(
+            clipper: ClipParallelogram(),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 2),
+              child: Image.asset(
+                Assets.defaultHomeBanner,
+                width: MediaQuery.sizeOf(context).width,
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
-        ),
+        );
+      },
+      options: CarouselOptions(
+        enlargeCenterPage: true,
+        viewportFraction: 0.8,
+        enlargeFactor: 0.2,
       ),
     );
   }
