@@ -8,14 +8,9 @@ import 'package:spirit_app/utils/styles/styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:spirit_app/utils/widgets/clip_path.dart';
 
-class Merch extends StatefulWidget {
+class Merch extends StatelessWidget {
   const Merch({super.key});
 
-  @override
-  State<Merch> createState() => _MerchState();
-}
-
-class _MerchState extends State<Merch> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

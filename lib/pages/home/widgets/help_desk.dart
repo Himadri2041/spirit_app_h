@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:spirit_app/models/Helpdesk/contacts_data.dart';
-import 'package:spirit_app/pages/home/widgets/row_widget.dart';
+import 'package:spirit_app/models/helpdesk/contacts_data.dart';
+import 'package:spirit_app/models/helpdesk/contacts_model.dart';
 import 'package:spirit_app/utils/assets.dart';
 import 'package:spirit_app/utils/styles/styles.dart';
 import 'package:spirit_app/utils/styles/colors.dart';
@@ -48,9 +48,9 @@ class HelpDialog extends StatelessWidget {
                       margin: const EdgeInsets.only(left: 5),
                       child: Column(
                         children: [
-                          Contactrow(contactModel: ContactsData.DialSpirit[0]),
-                          Contactrow(contactModel: ContactsData.DialSpirit[1]),
-                          Contactrow(contactModel: ContactsData.DialSpirit[2]),
+                          contactRow(contactModel: ContactsData.spiritContacts[0]),
+                          contactRow(contactModel: ContactsData.spiritContacts[1]),
+                          contactRow(contactModel: ContactsData.spiritContacts[2]),
                         ],
                       )),
                   const SizedBox(height: 16),
@@ -65,8 +65,8 @@ class HelpDialog extends StatelessWidget {
                   Container(
                     alignment: const Alignment(-1, -1),
                     margin: const EdgeInsets.only(left: 5),
-                    child: Contactrow(
-                      contactModel: ContactsData.Mail[0],
+                    child: contactRow(
+                      contactModel: ContactsData.mail[0],
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -82,9 +82,9 @@ class HelpDialog extends StatelessWidget {
                     margin: const EdgeInsets.only(left: 5),
                     child: Column(
                       children: [
-                        Contactrow(contactModel: ContactsData.ImpContacts[0]),
-                        Contactrow(contactModel: ContactsData.ImpContacts[0]),
-                        Contactrow(contactModel: ContactsData.ImpContacts[0]),
+                        contactRow(contactModel: ContactsData.impContacts[0]),
+                        contactRow(contactModel: ContactsData.impContacts[0]),
+                        contactRow(contactModel: ContactsData.impContacts[0]),
                       ],
                     ),
                   ),
@@ -93,6 +93,20 @@ class HelpDialog extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget contactRow({required ContactModel contactModel}) {
+    return SizedBox(
+      height: 60,
+      width: double.infinity,
+      child: Row(
+        children: [
+          contactModel.icon,
+          const SizedBox(width: 8),
+          Text(contactModel.contact, style: AppStyles.h1),
+        ],
       ),
     );
   }

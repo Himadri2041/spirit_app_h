@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spirit_app/models/ProNite/pronite_model.dart';
+import 'package:spirit_app/models/pronite/pronite_model.dart';
 import 'package:spirit_app/utils/styles/colors.dart';
 import 'package:spirit_app/utils/styles/styles.dart';
 

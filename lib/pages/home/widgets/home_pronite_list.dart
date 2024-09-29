@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spirit_app/pages/home/widgets/home_profile_card.dart';
-import 'package:spirit_app/models/ProNite/pronite_data.dart';
+import 'package:spirit_app/models/pronite/pronite_data.dart';
 
 class HomeProniteList extends StatelessWidget {
   const HomeProniteList({super.key});
