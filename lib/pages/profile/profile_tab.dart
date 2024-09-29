@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spirit_app/utils/styles/colors.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -11,7 +12,10 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(child: Text("This is Profile Page"),),
+      backgroundColor: AppColors.backgroundColor,
+      body: Center(
+        child: Text("This is Profile Page"),
+      ),
     );
   }
 }

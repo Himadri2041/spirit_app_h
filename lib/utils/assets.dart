@@ -17,6 +17,7 @@ class Assets {
   static const pronite = '$iconPath/mic.svg';
   static const merch = '$iconPath/tee.svg';
   static const profile = '$iconPath/profile.svg';
+  static const spiritLogo = '$iconPath/spirit_logo.svg';
 
   // images
   static const backgroundFrame = '$imagePath/background_frame.png';
