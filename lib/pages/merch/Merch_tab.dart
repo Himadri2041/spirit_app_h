@@ -33,7 +33,6 @@ class _MerchState extends State<Merch> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 20),
                 Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Center(
@@ -43,7 +42,7 @@ class _MerchState extends State<Merch> {
                     ),
                   ),
                 ),
-                SizedBox(height: 64),
+                SizedBox(height: 16),
                 MerchCard(),
                 MerchCard(),
                 MerchCard(),

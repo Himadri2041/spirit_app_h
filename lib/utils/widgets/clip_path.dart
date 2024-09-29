@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spirit_app/utils/styles/colors.dart';
 
 class BorderPainter extends CustomPainter {
   @override
@@ -14,8 +15,8 @@ class BorderPainter extends CustomPainter {
 
     Paint paint = Paint()
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 10.0
-      ..color = Colors.red;
+      ..strokeWidth = 8
+      ..color = AppColors.primaryColor;
 
     canvas.drawPath(path, paint);
   }
@@ -60,14 +61,12 @@ class ClipLeftAlign extends CustomClipper<Path> {
   Path getClip(Size size) {
     double width = size.width;
     double height = size.height;
-
     Path path = Path();
-    path.moveTo(delta, 0);
+    path.moveTo(0, 0);
     path.lineTo(width, 0);
     path.lineTo(width, height);
-    path.lineTo(0, height);
+    path.lineTo(delta, height);
     path.close();
-
     return path;
   }
 

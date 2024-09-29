@@ -8,11 +8,11 @@ class AppStyles {
 
   /// size 20
   static const b2 = TextStyle(
-      color: Colors.white,
-      fontSize: 20,
-      fontFamily: 'Sequel Sans',
-      height: 0,
-      fontWeight: FontWeight.w500);
+    color: Colors.white,
+    fontSize: 20,
+    height: 0,
+    fontWeight: FontWeight.w500,
+  );
 
   /// size 13
   static const b3 = TextStyle(fontWeight: FontWeight.w500, fontSize: 13, color: AppColors.white);
@@ -40,7 +40,7 @@ class AppStyles {
       height: 0,
       fontWeight: FontWeight.w300);
 
-  static const m1=TextStyle(
+  static const m1 = TextStyle(
     color: Colors.white,
     fontSize: 20.85,
     fontFamily: 'Base Neue Trial',
@@ -73,7 +73,6 @@ class AppStyles {
     height: 0,
   );
 }
-
 
 extension AppStylesExtension on TextStyle {
   TextStyle setColor(Color color) => copyWith(color: color);

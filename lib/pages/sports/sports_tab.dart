@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spirit_app/utils/styles/colors.dart';
 
 class Sports extends StatefulWidget {
   const Sports({super.key});
@@ -11,7 +12,10 @@ class _SportsState extends State<Sports> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(child: Text("This is Sports Page"),),
+      backgroundColor: AppColors.backgroundColor,
+      body: Center(
+        child: Text("This is Sports Page"),
+      ),
     );
   }
 }

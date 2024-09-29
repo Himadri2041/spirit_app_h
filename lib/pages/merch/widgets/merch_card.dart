@@ -31,34 +31,38 @@ class MerchCard extends StatelessWidget {
                   ],
                 ),
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  ClipPath(
-                    clipper: ClipRightAlign(),
-                    child: Container(
-                      padding: const EdgeInsets.all(4).copyWith(right: 12, left: 8),
-                      decoration: const BoxDecoration(
-                        color: AppColors.primaryColor,
-                      ),
-                      child: const Text(
-                        'Logo Pink Blue Tee (White)',
-                        style: AppStyles.m2,
+              Transform.translate(
+                offset: const Offset(-6, 0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ClipPath(
+                      clipper: ClipRightAlign(),
+                      child: Container(
+                        padding: const EdgeInsets.all(4).copyWith(right: 12, left: 8),
+                        decoration: const BoxDecoration(
+                          color: AppColors.primaryColor,
+                        ),
+                        child: const Text(
+                          'Logo Pink Blue Tee (White)',
+                          style: AppStyles.m2,
+                        ),
                       ),
                     ),
-                  ),
-                  ClipPath(
-                    clipper: ClipRightAlign(),
-                    child: Container(
-                      padding: const EdgeInsets.all(4).copyWith(right: 12, left: 8),
-                      decoration: const BoxDecoration(
-                        color: AppColors.secondaryColor,
+                    const SizedBox(height: 8),
+                    ClipPath(
+                      clipper: ClipRightAlign(),
+                      child: Container(
+                        padding: const EdgeInsets.all(2).copyWith(right: 12, left: 8),
+                        decoration: const BoxDecoration(
+                          color: AppColors.secondaryColor,
+                        ),
+                        child: const Text('₹499/-', style: AppStyles.m3),
                       ),
-                      child: const Text('₹499/-', style: AppStyles.m3),
                     ),
-                  ),
-                  const SizedBox(height: 10),
-                ],
+                    const SizedBox(height: 10),
+                  ],
+                ),
               )
             ],
           ),
