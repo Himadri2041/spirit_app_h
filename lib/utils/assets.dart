@@ -9,6 +9,9 @@ class Assets {
   static const cart = '$iconPath/cart.svg';
   static const scheduletitle = '$iconPath/Schedule_title.png';
   static const nov1 = '$iconPath/Nov 1.png';
+  static const helpdesktitle= '$iconPath/Helpdesk.png';
+  static const phone = '$iconPath/phone.png';
+  static const mail = '$iconPath/mail-01.png';
 
   // tab icons
   static const home = '$iconPath/home.svg';

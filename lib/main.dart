@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spirit_app/pages/home/home.dart';
+import 'package:spirit_app/pages/home/widgets/Helpdesk.dart';
+import 'package:spirit_app/pages/home/widgets/Schedule.dart';
 import 'package:spirit_app/utils/globals.dart';
 
 void main() {
@@ -15,7 +17,9 @@ class MyApp extends StatelessWidget {
       navigatorKey: navigatorKey,
       scaffoldMessengerKey: scaffoldMessengerKey,
       debugShowCheckedModeBanner: false,
-      home: const Home(),
+      home:  Home(),
+   //  home: ScheduleDialog(),
+
     );
   }
 }
