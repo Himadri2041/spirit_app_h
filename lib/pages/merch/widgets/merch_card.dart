@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spirit_app/utils/assets.dart';
 import 'package:spirit_app/utils/styles/colors.dart';
-import 'package:spirit_app/utils/styles/outline.dart';
 import 'package:spirit_app/utils/styles/styles.dart';
 import 'package:spirit_app/utils/widgets/clip_path.dart';
 
@@ -10,20 +9,23 @@ class MerchCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 44),
-          child: Stack(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 44),
+      child: Column(
+        children: [
+          Stack(
             children: [
               Container(
-                decoration: Outline.red_outline,
+                decoration: BoxDecoration(
+                  color: AppColors.blank,
+                  border: Border.all(color: AppColors.primaryColor),
+                ),
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
                     Image.asset(
                       Assets.merchwhite,
-                      fit: BoxFit.cover,
+                      width: double.infinity,
                     ),
                     Image.asset(Assets.merchlogo),
                   ],
@@ -33,7 +35,7 @@ class MerchCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ClipPath(
-                    clipper: ClipRightAlign(percent: 0.05),
+                    clipper: ClipRightAlign(),
                     child: Container(
                       padding: const EdgeInsets.all(4).copyWith(right: 12, left: 8),
                       decoration: const BoxDecoration(
@@ -46,7 +48,7 @@ class MerchCard extends StatelessWidget {
                     ),
                   ),
                   ClipPath(
-                    clipper: ClipRightAlign(percent: 0.05),
+                    clipper: ClipRightAlign(),
                     child: Container(
                       padding: const EdgeInsets.all(4).copyWith(right: 12, left: 8),
                       decoration: const BoxDecoration(
@@ -60,10 +62,7 @@ class MerchCard extends StatelessWidget {
               )
             ],
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 44),
-          child: Container(
+          Container(
             width: double.infinity,
             padding: const EdgeInsets.all(12),
             decoration: const BoxDecoration(color: AppColors.secondaryColor),
@@ -76,9 +75,9 @@ class MerchCard extends StatelessWidget {
               ),
             ),
           ),
-        ),
-        const SizedBox(height: 16),
-      ],
+          const SizedBox(height: 16),
+        ],
+      ),
     );
   }
 }

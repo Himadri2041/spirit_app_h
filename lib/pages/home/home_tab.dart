@@ -4,7 +4,6 @@ import 'package:spirit_app/pages/home/widgets/ongoing_matches.dart';
 import 'package:spirit_app/pages/home/widgets/home_carousel.dart';
 import 'package:spirit_app/pages/home/widgets/home_pronite_list.dart';
 import 'package:spirit_app/utils/assets.dart';
-import 'package:spirit_app/utils/styles/outline.dart';
 import 'package:spirit_app/utils/styles/colors.dart';
 import 'package:spirit_app/utils/styles/styles.dart';
 
@@ -63,7 +62,10 @@ class HomeTab extends StatelessWidget {
                   padding: const EdgeInsets.all(12),
                   height: 100,
                   margin: const EdgeInsets.only(left: 18, right: 18),
-                  decoration: Outline.red_outline,
+                  decoration: BoxDecoration(
+                    color: AppColors.blank,
+                    border: Border.all(color: AppColors.primaryColor),
+                  ),
                   child: const Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.start,

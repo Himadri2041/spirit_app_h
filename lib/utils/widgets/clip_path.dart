@@ -53,8 +53,8 @@ class ClipParallelogram extends CustomClipper<Path> {
 }
 
 class ClipLeftAlign extends CustomClipper<Path> {
-  final double percent;
-  ClipLeftAlign({this.percent = 0.1});
+  final double delta;
+  ClipLeftAlign({this.delta = 10});
 
   @override
   Path getClip(Size size) {
@@ -62,7 +62,7 @@ class ClipLeftAlign extends CustomClipper<Path> {
     double height = size.height;
 
     Path path = Path();
-    path.moveTo(width * percent, 0);
+    path.moveTo(delta, 0);
     path.lineTo(width, 0);
     path.lineTo(width, height);
     path.lineTo(0, height);
@@ -78,8 +78,8 @@ class ClipLeftAlign extends CustomClipper<Path> {
 }
 
 class ClipRightAlign extends CustomClipper<Path> {
-  final double percent;
-  ClipRightAlign({this.percent = 0.1});
+  final double delta;
+  ClipRightAlign({this.delta = 10});
 
   @override
   Path getClip(Size size) {
@@ -89,7 +89,7 @@ class ClipRightAlign extends CustomClipper<Path> {
     Path path = Path();
     path.moveTo(0, 0);
     path.lineTo(width, 0);
-    path.lineTo(width * (1 - percent), height);
+    path.lineTo(width - delta, height);
     path.lineTo(0, height);
     path.close();
 
