@@ -17,18 +17,31 @@ class Sports extends StatefulWidget {
 }
 
 class _SportsState extends State<Sports> {
+
+
+  late String event;
+  late List<EventModel> eventList;
+
+  @override
+  void initState() {
+    super.initState();
+
+    event="Basket Ball";
+    eventList=Events.specificEVent(event);
+  }
+
   @override
   Widget build(BuildContext context) {
 
 
     List<GameModel> games = [
-      GameModel(gameName: "Basketball", iconData: Icons.sports_basketball),
+      GameModel(gameName: "Basket Ball", iconData: Icons.sports_basketball),
       GameModel(gameName: "Swimming", iconData: Icons.pool),
       GameModel(gameName: "Running", iconData: Icons.directions_run),
-      GameModel(gameName: "Volleyball", iconData: Icons.sports_volleyball),
+      GameModel(gameName: "Volley Ball", iconData: Icons.sports_volleyball),
       GameModel(gameName: "Cricket", iconData: Icons.sports_cricket),
       GameModel(gameName: "Martial Arts", iconData: Icons.sports_kabaddi),
-      GameModel(gameName: "Football", iconData: Icons.sports_soccer),
+      GameModel(gameName: "Foot Ball", iconData: Icons.sports_soccer),
       GameModel(gameName: "Tennis", iconData: Icons.sports_tennis),
       GameModel(gameName: "Hockey", iconData: Icons.sports_hockey),
       GameModel(gameName: "Baseball", iconData: Icons.sports_baseball),
@@ -45,9 +58,7 @@ class _SportsState extends State<Sports> {
       "Delhi University",
       "IGDTU"
     ];
-    String event="Basket ball";
-    event="Basket Ball";
-    List<EventModel> eventList=Events.specificEVent(event);
+
     //TODO add logic to select sports on top ui
     //TODO add ongoing match ....
 
@@ -73,8 +84,17 @@ class _SportsState extends State<Sports> {
                     itemCount: games.length,
                     itemBuilder: (context, index) {
                       //final event = eventList[index];
-                      return sportsPageWidgets().buildCircle(
-                          Icon(games[index].iconData,size: 40,color: AppColors.white,)
+                      return InkWell(
+                        onTap: (){
+                          setState(() {
+                            event=games[index].gameName;
+                            eventList=Events.specificEVent(event);
+
+                          });
+                        },
+                        child: sportsPageWidgets().buildCircle(
+                            Icon(games[index].iconData,size: 40,color: AppColors.white,)
+                        ),
                       );
                     },
                   ),
