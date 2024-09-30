@@ -39,4 +39,5 @@ class Assets {
   static const defaultArtist = '$imagePath/artist.png';
   static const defaultHomeBanner = '$imagePath/default_home_banner.jpg';
   static const merchBg = '$imagePath/merch_bg.png';
+  static const informal = '$imagePath/informal.png';
 }

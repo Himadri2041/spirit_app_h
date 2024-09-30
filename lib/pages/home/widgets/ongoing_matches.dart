@@ -8,7 +8,6 @@ class OngoingMatches extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 18),
       height: 120,
       child: ListView.builder(
         shrinkWrap: true,

@@ -31,7 +31,7 @@ class _ScheduleCardState extends State<ScheduleCard> {
                 Container(
                   clipBehavior: Clip.antiAlias,
                   height: 17.35,
-                  width: 128,
+                  width: double.infinity,
                   decoration: const BoxDecoration(color: AppColors.primaryColor),
                   padding: const EdgeInsets.symmetric(horizontal: 5.58, vertical: .1),
                   child: Text(

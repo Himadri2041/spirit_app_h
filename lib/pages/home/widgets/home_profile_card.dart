@@ -10,7 +10,7 @@ class HomeProniteCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 18),
+      margin: const EdgeInsets.only(right:10),
       height: 200,
       width: 148,
       clipBehavior: Clip.antiAlias,
