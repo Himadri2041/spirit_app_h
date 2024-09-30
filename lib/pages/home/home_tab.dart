@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:spirit_app/pages/home/widgets/help_desk.dart';
-import 'package:spirit_app/pages/home/widgets/home_informal_card.dart';
+
 import 'package:spirit_app/pages/home/widgets/home_informal_list.dart';
 import 'package:spirit_app/pages/home/widgets/ongoing_matches.dart';
 import 'package:spirit_app/pages/home/widgets/home_carousel.dart';
