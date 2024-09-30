@@ -4,6 +4,7 @@ class Assets {
 
   static const appTitle = '$iconPath/app_title.svg';
   static const merchtitle = '$iconPath/Merch_title.svg';
+  static const spoertstitle = '$iconPath/sports_title.svg';
   static const helpDesk = '$iconPath/helpdesk.svg';
   static const schedule = '$iconPath/schedule.svg';
   static const cart = '$iconPath/cart.svg';
@@ -20,6 +21,17 @@ class Assets {
   static const phone='$iconPath/phone.png';
   static const helpdesktitle = '$iconPath/Helpdesk.png';
   static const yourCartTitle = '$iconPath/your_cart_title.svg';
+
+
+  //sports icons
+  static const basketball = '$iconPath/sports/badminton.png';
+  static const badminton = '$iconPath/sports/basketball.png';
+  static const cricket = '$iconPath/sports_title.svg';
+  static const football = '$iconPath/helpdesk.svg';
+  static const hockey = '$iconPath/schedule.svg';
+  static const swimming = '$iconPath/cart.svg';
+
+  static const location = '$iconPath/location.svg';
 
   // tab icons
   static const home = '$iconPath/home.svg';
