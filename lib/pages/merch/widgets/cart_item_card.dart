@@ -4,6 +4,7 @@ import 'package:spirit_app/utils/assets.dart';
 import 'package:spirit_app/utils/styles/colors.dart';
 import 'package:spirit_app/utils/styles/styles.dart';
 import 'package:spirit_app/utils/widgets/clip_path.dart';
+import 'package:spirit_app/utils/widgets/counter.dart';
 
 class CartItemCard extends StatefulWidget {
   const CartItemCard({
@@ -50,7 +51,8 @@ class _CartItemCardState extends State<CartItemCard> {
                             2,
                             (index) {
                               return Padding(
-                                padding: const EdgeInsets.all(16).copyWith(top: 44),
+                                padding:
+                                    const EdgeInsets.all(16).copyWith(top: 44),
                                 child: Image.asset(
                                   Assets.merchwhite,
                                 ),
@@ -80,7 +82,9 @@ class _CartItemCardState extends State<CartItemCard> {
                                   height: selected ? 6 : 5,
                                   width: selected ? 6 : 5,
                                   decoration: BoxDecoration(
-                                    color: selected ? AppColors.white : Colors.grey,
+                                    color: selected
+                                        ? AppColors.white
+                                        : Colors.grey,
                                   ),
                                 ),
                               ),
@@ -151,48 +155,9 @@ class _CartItemCardState extends State<CartItemCard> {
                         children: [
                           Text("Quantity", style: AppStyles.l1.setFontSize(11)),
                           const SizedBox(height: 8),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              IconButton(
-                                onPressed: () {
-                                  setState(() {
-                                    _num--;
-                                  });
-                                },
-                                icon: const Icon(
-                                  Icons.remove_rounded,
-                                  color: AppColors.white,
-                                ),
-                              ),
-                              Container(
-                                padding: const EdgeInsets.symmetric(
-                                  vertical: 6,
-                                  horizontal: 16,
-                                ),
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: AppColors.white, width: 1.5),
-                                ),
-                                child: Text(
-                                  "$_num",
-                                  style: AppStyles.m2.copyWith(
-                                    color: AppColors.white,
-                                    fontStyle: FontStyle.italic,
-                                  ),
-                                ),
-                              ),
-                              IconButton(
-                                onPressed: () {
-                                  setState(() {
-                                    _num++;
-                                  });
-                                },
-                                icon: const Icon(
-                                  Icons.add_rounded,
-                                  color: AppColors.white,
-                                ),
-                              ),
-                            ],
+                          Counter(
+                            initialValue: 2,
+                            onChange: (val) {},
                           ),
                         ],
                       ),
