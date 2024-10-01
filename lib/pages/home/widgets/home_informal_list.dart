@@ -13,10 +13,10 @@ class HomeInformalList extends StatelessWidget {
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
         physics: const BouncingScrollPhysics(),
-        itemCount:  Informal().allInformals.length,
+        itemCount: Informal().allInformals.length,
         itemBuilder: (context, index) {
           final informal = Informal().allInformals[index];
-          return informalCard(informalmodel: informal);
+          return InformalCard(informalmodel: informal);
         },
       ),
     );
