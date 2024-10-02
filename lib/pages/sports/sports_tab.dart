@@ -6,6 +6,7 @@ import 'package:spirit_app/pages/sports/widgets/sports_tab_widgets.dart';
 import '../../models/events/events_data.dart';
 import '../../utils/assets.dart';
 import '../../utils/styles/styles.dart';
+import '../../utils/widgets/dailogue_box.dart';
 import '../../utils/widgets/schedule_card.dart';
 
 
@@ -112,8 +113,8 @@ class _SportsState extends State<Sports> {
                             event,
                             style: AppStyles.m4.copyWith(color: AppColors.secondaryColor,fontWeight: FontWeight.w400,fontSize: 18),
                           ),
-                          SizedBox(width :3),
-                          Icon(Icons.keyboard_arrow_down_rounded,color: AppColors.secondaryColor,)
+                          const SizedBox(width :3),
+                          const Icon(Icons.keyboard_arrow_down_rounded,color: AppColors.secondaryColor,)
                         ],
                       ),
                     ),
@@ -147,7 +148,17 @@ class _SportsState extends State<Sports> {
                     itemCount: eventList.length,
                     itemBuilder: (context, index) {
                       final event = eventList[index];
-                      return ScheduleCard(eventModel: event);
+                      return InkWell(
+                          onLongPress: (){
+                            showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return EditDialogBox(event: event);
+                              },
+                            );
+
+                          },
+                          child: ScheduleCard(eventModel: event));
                     },
                   ),
                 ),
@@ -172,7 +183,7 @@ class _SportsState extends State<Sports> {
                     ),
                   ],
                 ),
-                SizedBox(height: 10,),
+                const SizedBox(height: 10,),
                 Container(
                   margin: const EdgeInsets.only(left: 18,right: 10),
                   //height: 120,
@@ -186,19 +197,17 @@ class _SportsState extends State<Sports> {
                     },
                   ),
                 ),
-                SizedBox(height: 65,),
+                const SizedBox(height: 65,),
                 sportsPageWidgets().buildLeaderBoard(),
-                SizedBox(height: 5,),
-                Container(
-                  child: ListView.builder(
-                      shrinkWrap: true,
-                      primary: false,
-                      itemCount: teams.length,
-                      itemBuilder: (context,index){
-                        return sportsPageWidgets().rowsBuilderBoard(teams[index], (index%2));
-                      }),
-                ),
-                SizedBox(height: 60,)
+                const SizedBox(height: 5,),
+                ListView.builder(
+                    shrinkWrap: true,
+                    primary: false,
+                    itemCount: teams.length,
+                    itemBuilder: (context,index){
+                      return sportsPageWidgets().rowsBuilderBoard(teams[index], (index%2));
+                    }),
+                const SizedBox(height: 60,)
               ],
             ),
           ),

@@ -100,3 +100,56 @@ class ClipRightAlign extends CustomClipper<Path> {
     return true;
   }
 }
+
+class DashedBorderPainter extends CustomPainter {
+  final Color color;
+  final double strokeWidth;
+  final double dashedLength;
+  final double blankLength;
+
+  DashedBorderPainter({
+    required this.color,
+    this.strokeWidth = 2.0,
+    this.dashedLength = 6.0,
+    this.blankLength = 4.0,
+  });
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    Paint paint = Paint()
+      ..color = color
+      ..strokeWidth = strokeWidth
+      ..style = PaintingStyle.stroke;
+
+    // Top side
+    _drawDashedLine(canvas, paint, Offset(0, 0), Offset(size.width, 0));
+
+    // Right side
+    _drawDashedLine(canvas, paint, Offset(size.width, 0), Offset(size.width, size.height));
+
+    // Bottom side
+    _drawDashedLine(canvas, paint, Offset(size.width, size.height), Offset(0, size.height));
+
+    // Left side
+    _drawDashedLine(canvas, paint, Offset(0, size.height), Offset(0, 0));
+  }
+
+  void _drawDashedLine(Canvas canvas, Paint paint, Offset start, Offset end) {
+    double totalLength = (end - start).distance;
+    double drawnLength = 0;
+    Offset direction = (end - start) / totalLength;
+
+    while (drawnLength < totalLength) {
+      final dashStart = start + direction * drawnLength;
+      final dashEnd = start + direction * (drawnLength + dashedLength).clamp(0, totalLength);
+      canvas.drawLine(dashStart, dashEnd, paint);
+      drawnLength += dashedLength + blankLength;
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return false;
+  }
+}
+
