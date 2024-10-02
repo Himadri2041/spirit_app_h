@@ -18,7 +18,7 @@ class _ScheduleCardState extends State<ScheduleCard> {
         margin: const EdgeInsets.only(right: 10),
         width: 128,
         height: 120,
-        clipBehavior: Clip.antiAlias,
+        clipBehavior: Clip.antiAlias, 
         decoration: BoxDecoration(
           color: AppColors.blank,
           border: Border.all(color: AppColors.primaryColor),
