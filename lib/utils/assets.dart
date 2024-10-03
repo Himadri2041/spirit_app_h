@@ -21,6 +21,12 @@ class Assets {
   static const phone='$iconPath/phone.png';
   static const helpdesktitle = '$iconPath/Helpdesk.png';
   static const yourCartTitle = '$iconPath/your_cart_title.svg';
+  static const aboutTitle = '$iconPath/About_title.svg';
+  static const aboutInfo = '$iconPath/info.svg';
+  static const teamTitle = '$iconPath/team_title.svg';
+  static const profileImage = '$iconPath/profile_image.png';
+
+
 
 
   //sports icons

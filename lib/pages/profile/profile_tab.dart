@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:spirit_app/pages/about/aboutScreen.dart';
+import 'package:spirit_app/pages/teams/teamScreen.dart';
 import 'package:spirit_app/utils/assets.dart';
 import 'package:spirit_app/utils/styles/colors.dart';
 import 'package:spirit_app/utils/styles/styles.dart';
@@ -140,47 +142,57 @@ class Profile extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Expanded(
-                          child: Container(
-                            margin: const EdgeInsets.only(right: 4),
-                            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                            decoration: const BoxDecoration(
-                              color: AppColors.primaryColor,
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                SvgPicture.asset(Assets.about, height: 20),
-                                const SizedBox(width: 8),
-                                Text(
-                                  "About",
-                                  style: AppStyles.m4.copyWith(
-                                    fontStyle: FontStyle.italic,
-                                    color: AppColors.white,
+                          child: InkWell(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context) =>aboutScreen(),));
+                            },
+                            child: Container(
+                              margin: const EdgeInsets.only(right: 4),
+                              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                              decoration: const BoxDecoration(
+                                color: AppColors.primaryColor,
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  SvgPicture.asset(Assets.aboutInfo, height: 20),
+                                  const SizedBox(width: 8),
+                                  Text(
+                                    "About",
+                                    style: AppStyles.m4.copyWith(
+                                      fontStyle: FontStyle.italic,
+                                      color: AppColors.white,
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                         ),
                         Expanded(
-                          child: Container(
-                            margin: const EdgeInsets.only(left: 4),
-                            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                            decoration: const BoxDecoration(
-                              color: AppColors.secondaryColor,
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                SvgPicture.asset(Assets.team, height: 20),
-                                const SizedBox(width: 8),
-                                Text(
-                                  "Team",
-                                  style: AppStyles.m4.copyWith(
-                                    fontStyle: FontStyle.italic,
+                          child: InkWell(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => teamScreen(),));
+                            },
+                            child: Container(
+                              margin: const EdgeInsets.only(left: 4),
+                              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                              decoration: const BoxDecoration(
+                                color: AppColors.secondaryColor,
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  SvgPicture.asset(Assets.team, height: 20),
+                                  const SizedBox(width: 8),
+                                  Text(
+                                    "Team",
+                                    style: AppStyles.m4.copyWith(
+                                      fontStyle: FontStyle.italic,
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                         )
