@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:spirit_app/models/ProNite/pronite_model.dart';
+import 'package:spirit_app/models/pronite/pronite_model.dart';
 import 'package:spirit_app/utils/styles/colors.dart';
 import 'package:spirit_app/utils/styles/styles.dart';
-import '../../../utils/styles/outline.dart';
 
 class HomeProniteCard extends StatelessWidget {
   final ProniteModel proniteModel;
@@ -11,11 +10,14 @@ class HomeProniteCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 18),
+      margin: const EdgeInsets.only(right:10),
       height: 200,
       width: 148,
       clipBehavior: Clip.antiAlias,
-      decoration: Outline.red_outline,
+      decoration: BoxDecoration(
+        color: AppColors.blank,
+        border: Border.all(color: AppColors.primaryColor),
+      ),
       child: Column(
         children: [
           Container(

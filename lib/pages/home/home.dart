@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:spirit_app/pages/home/home_tab.dart';
-import 'package:spirit_app/pages/merch/Merch_tab.dart';
-import 'package:spirit_app/pages/merch/Merch_tab.dart';
+import 'package:spirit_app/pages/merch/merch_tab.dart';
 import 'package:spirit_app/pages/profile/profile_tab.dart';
 import 'package:spirit_app/pages/pronite/pronite_tab.dart';
 import 'package:spirit_app/pages/sports/sports_tab.dart';
@@ -31,6 +30,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.backgroundColor,
       body: PageView.builder(
         controller: _pageController,
         itemCount: _pages.length,

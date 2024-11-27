@@ -1,4 +1,4 @@
-import 'package:spirit_app/models/ProNite/pronite_model.dart';
+import 'package:spirit_app/models/pronite/pronite_model.dart';
 
 class Pronite {
   List<ProniteModel> allPronites = [
